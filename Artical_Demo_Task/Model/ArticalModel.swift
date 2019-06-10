@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+struct Artical {
+    
+    var author: String?
+    var title: String?
+    var url: String?
+    var description: String?
+    var img : String?
+}

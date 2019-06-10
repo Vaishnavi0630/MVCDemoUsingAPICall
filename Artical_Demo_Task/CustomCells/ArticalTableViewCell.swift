@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ArticalTableViewCell: UITableViewCell {
     
@@ -26,6 +27,16 @@ class ArticalTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func populate(with artical: Artical)  {
+        
+        lblTitle.text = artical.title
+        lblAuthor.text = artical.author
+        lblDescription.text = artical.description
+        let ulr = URL(string: artical.img ?? "")
+        ImgView.af_setImage(withURL: ulr!)
+        lblUrl.text = artical.url
     }
 
 }
